@@ -1,0 +1,22 @@
+<head>
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" routerLink="/home" routerLinkActive="active">Big Brain<br></a>
+  <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+  <a class="nav-link" routerLink="/share-idea" routerLinkActive="active">Share Idea</a>
+  <a class="nav-link" routerLink="/show-ideas" routerLinkActive="active">Show Ideas</a>
+
+  <div *ngIf="connected; then thenBlock else elseBlock"></div>
+  <ng-template #thenBlock>
+    <a class="nav-link" routerLink="/user" routerLinkActive="active" >{{connectedAccount.username}}</a>
+    <a class="nav-link" routerLink="/home" routerLinkActive="active" (click)="disconnect()">Disconnect</a>
+  </ng-template>
+  <ng-template #elseBlock>
+    <a class="nav-link" routerLink="/log-in" routerLinkActive="active">Log In</a>
+    <a class="nav-link" routerLink="/sign-up" routerLinkActive="active">Sign Up</a>
+  </ng-template>
+</nav>
+<br>
+</body>

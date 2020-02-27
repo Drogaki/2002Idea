@@ -1,0 +1,21 @@
+<app-nav-bar></app-nav-bar>
+<head>
+<title>Log In</title>
+</head>
+
+<body>
+
+
+<h1>Log In</h1><br>
+<label>Username</label>
+<input #usernameLogIn class="form-control" placeholder="Username"/>
+<br>
+<label>Password</label>
+<input #passwordLogIn class="form-control" placeholder="Password"/>
+<br>
+<button id="buttonLogIn" class="btn btn-primary" routerLink="/home" routerLinkActive="active" (click)="logIn(usernameLogIn.value, passwordLogIn.value)">Log In</button>
+<br>
+
+
+</body>
+

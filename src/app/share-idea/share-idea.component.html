@@ -1,0 +1,20 @@
+<app-nav-bar></app-nav-bar>
+<head>
+<title>Share your idea</title>
+</head>
+
+<body>
+
+<h1>Share your idea</h1><br>
+<label>Title</label>
+<input #ideaTitle id="ideaTitle" class="form-control" placeholder="Title">
+<br>
+<label>Description</label>
+<textarea #ideaDescription id="ideaDescription"  class="form-control" rows="20">
+</textarea>
+<br>
+<button id="buttonSendIdea" class="btn btn-primary" (click)="addIdea(ideaTitle.value, ideaDescription.value)">Send Idea</button>
+<br>
+
+</body>
+
