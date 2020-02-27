@@ -17,7 +17,6 @@ export class NavBarComponent implements OnInit {
      }
 
   ngOnInit() {
-    console.log(this.accountsService.connected);
     this.connected=this.accountsService.connected;
     if(this.connected===true){
       this.connectedAccount=this.accountsService.connectedAccount;

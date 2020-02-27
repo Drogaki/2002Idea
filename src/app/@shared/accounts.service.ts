@@ -61,7 +61,6 @@ export class AccountsService {
     if(!!theJsonAccounts ) {
       this.accounts = (JSON.parse(theJsonAccounts));
       this.totalAccounts = this.accounts.length;
-      console.log("Les comptes"+this.accounts);
     }
   }
 
